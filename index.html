@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ruben's Hangman Game</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" href=https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cyborg/bootstrap.min.css>
+</head>
+<body>
+	
+	<div class="jumbotron">
+
+   			<img class="center-block" src="assets/images/spacehangman.jpg" alt="outer space hangman" width="500px">
+
+	</div>
+	<!-- Panel  -->
+	<div class="panel panel-primary" style="max-width: 66.6%; margin-left: auto; margin-right: auto">
+
+  		<div class="panel-heading text-center">
+    		<h3 class="panel-title">Welcome to Space Hangman</h3>
+  		</div>
+
+  		<div class="panel-body text-center">
+
+    		<div class="row">
+
+				<!-- left column-->
+  				<div class="col-md-5">
+
+  					<img src="assets/images/solar-system.jpg" style="margin-right: auto; margin-right: auto">
+
+  				</div>
+
+  				<div class="col-md-1"></div>
+
+				<!-- right column-->
+  				<div class="col-md-5" style="border: 5px dashed white">
+
+<!-- win-counter	Text for wins and a counter div spaceholder with the id win-counter are below. the wincounter div will be updated through the javascript file -->
+  					<h3>Choose a letter to start playing<br><br></h3>
+
+  					<h5>Number of wins<br><br></h5>
+
+  					<div id=win-counter>
+
+  						<!-- <h5>Wins = </h5><br><br> -->
+
+					</div>
+
+<!-- dash-letter	Dashes for letters of the current word and a div spaceholder with the id dash-letter are below. the dash-letter div will be updated through the javascript file -->
+					<h5>Current Word<br><br></h5>
+
+					<div id=dash-letter>
+
+						<!-- <h5>dashes? = </h5><br><br> -->
+
+					</div>
+
+<!-- letters-guessed.Text for letters guessed and a div spaceholder with the id dash-letter are below. the dash-letter div will be updated through the javascript file -->
+					<h5>Letters Guessed<br><br></h5>
+
+					<div id=letters-guessed>
+
+						<!-- <h5>empty until letters are pressed</h5><br><br> -->
+						
+					</div>
+
+  				</div>
+
+			</div>
+
+  		</div>
+
+	</div>
+
+	<script link rel="javascript" type="text/javascript" href="assets/javascript/game.js">
+		
+	</script>
+
+</body>
+</html>
