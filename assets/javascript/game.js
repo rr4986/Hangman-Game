@@ -1,24 +1,49 @@
 var winCounter = 0;
-var dashLetters;
-var lettersGuessed;
-var wordBank;
-
-wordBank = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune", "pluto", "galaxy", "nebula", "spaceship", "sun", "asteroid", "comet"];
-
+var dashLetters = "";
+var lettersGuessed="";
+var userChoice="";
+var wordBank = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune", "pluto", "galaxy", "nebula", "spaceship", "sun", "asteroid", "comet"];
 var randomNumber=Math.floor(Math.random()*14+1);
+var letterChoices = {};
+var numberTries = 0;
+
+dashLetters = [];
 
 selectedWord = wordBank[randomNumber];
 
-var letterChoices = function(){
-	for(i=0;i<selectedWord.length;i++){
-	//create a var letterChoices = objet where the index is position of each letter
-	//and the elememt is each letter in the word
-	//create a var dashesShown = object where the index is position of each letter
-	//and the elememt is a dash and innerhtML for dash-letter is rewritten
-	//return letterChoices
-	//return that innerhtml?
+for(i=0;i<selectedWord.length;i++){
+
+	letterChoices[i+1] = selectedWord[i];
+
+	dashLetters.push(" _ ");
+
+	
+
 }
 
+
+document.getElementById("dash-letter").innerHTML = dashLetters;
+
+
+document.onkeyup = function(event) {
+
+    userChoice = event.key;
+ 
+   	for(i=0;i<selectedWord.length;i++){
+
+    	if(userChoice === letterChoices[i+1]){
+    		alert("good choice");
+
+			dashLetters[i] = userChoice;
+
+    	}
+
+    	
+   	}
+
+   	document.getElementById("dash-letter").innerHTML = dashLetters;
+
+};
 //create an onkey event gets selected key
 //if selected key = letterChoices elements (for loop is needed)
 //return index for that element
